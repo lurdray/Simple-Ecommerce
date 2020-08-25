@@ -1,0 +1,30 @@
+{% extends "mainapp/base.html" %}
+
+{% block title %}
+	Detail Page
+{% endblock %}
+
+{% block content %}
+	<p>detail page</p>
+	
+	<p>
+		product detail<br />
+		{{ product.name }}<br />
+		{{ product.descrp }}<br />
+		{{ product.pub_date }}<br />
+	</p>
+	
+	<p>
+		order detail<br />
+		{{ order.quantity }}<br />
+		{{ order.name_owner }}<br />
+		{{ order.phone_owner }}<br />
+		{{ order.email_owner }}<br />
+		{{ order.comment }}<br />
+		{{ order.pub_date }}<br />
+	</p>
+{% endblock %}
+
+
+
+

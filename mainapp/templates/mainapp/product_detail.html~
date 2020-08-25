@@ -1,0 +1,29 @@
+{% extends "mainapp/base.html" %}
+
+{% block title %}
+	Product Detail Page
+{% endblock %}
+
+{% block content %}
+	<p>Product detail page</p>
+	
+	{{ product.name }}<br />
+	{{ product.descrp }}<br />
+	<img src="{{ product.image.url }}"  width="75px" height="90px" />
+	{{ product.pub_date }}<br />
+	
+	
+	<br />
+	<h3>Make Order</h3>
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<input  type="text"  name="quantity" placeholder="quantity"><br />
+            <input  type="text"  name="name_owner" placeholder="your name"><br />
+            <input  type="text"  name="phone_owner" placeholder="your phone"><br />
+            <input  type="email"  name="email_owner" placeholder="your email"><br />
+            <textarea name="comment" rows="5" placeholder="Enter the comment"></textarea><br />
+           <button class="bttn bttn-primary">Submit!</button>
+        </form>
+{% endblock %}
+
+

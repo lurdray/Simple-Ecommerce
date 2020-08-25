@@ -1,0 +1,24 @@
+{% extends "mainapp/base.html" %}
+{% load staticfiles %}
+ 
+
+{% block title %}
+	Index Page
+{% endblock %}
+
+{% block content %}
+
+<p>Welcome to index</p>
+	
+	<h3>all products</h3>
+	<ul>
+		{% for product in products %}
+			<li><a href="{% url 'mainapp:product_detail' product.id %}" />{{ product }}</a></li>
+		{% endfor %}
+	</ul>
+
+ 
+
+
+{% endblock %}
+
